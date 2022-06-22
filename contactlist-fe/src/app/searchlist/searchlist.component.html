@@ -1,8 +1,8 @@
 <div>
     <h1>Search List By Name</h1>
     <div>
-        <label>Name:</label><input #searchTxt>
-        <button (click)="getListBySearch(searchTxt.value)">Search</button>
+        <label class="lbl">Name:</label><input #searchTxt>
+        <button class="btn-search" (click)="getListBySearch(searchTxt.value)">Search</button>
         <table>
             <tr *ngIf=contactList>
                 <th>Name</th>

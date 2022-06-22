@@ -2,12 +2,12 @@
     <h1>List By Paging</h1>
     <div>
         <div>
-            <label>Page:</label><input #page>
+            <label class="lbl">Page:</label><input #page>
         </div>
         <div>
-            <label>Size:</label><input #size>
+            <label class="lbl">Size:</label><input #size>
         </div>
-        <button (click)="getListByPaging(page.value, size.value)">Get List</button>
+        <button class="btn" (click)="getListByPaging(page.value, size.value)">Get List</button>
         <table>
             <tr *ngIf=contactList>
                 <th>Name</th>
