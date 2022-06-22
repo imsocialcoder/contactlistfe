@@ -6,6 +6,7 @@ import { appRoutes } from 'src/routes';
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contactlist/contactlist.component';
 import { SearchListComponent } from './searchlist/searchlist.component';
+import { NavBarComponent } from './nav/navbar.component';
 import { PagingListComponent } from './paging/paging.component';
 import { HttpClientModule }  from '@angular/common/http'
 
@@ -15,6 +16,7 @@ import { HttpClientModule }  from '@angular/common/http'
     ContactListComponent,
     SearchListComponent,
     PagingListComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

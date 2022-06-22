@@ -1,0 +1,22 @@
+<div>
+    <h1>List By Paging</h1>
+    <div>
+        <div>
+            <label>Page:</label><input #page>
+        </div>
+        <div>
+            <label>Size:</label><input #size>
+        </div>
+        <button (click)="getList(page.value, size.value)">Get List</button>
+        <table>
+            <tr *ngIf=contactList>
+                <th>Name</th>
+                <th>Photo</th>
+            </tr>
+            <tr *ngFor="let contact of contactList">
+                <td>{{contact.name}}</td>
+                <td><img src="{{contact.path}}"></td>
+            </tr>
+        </table>
+    </div>
+</div>

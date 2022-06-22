@@ -1,0 +1,16 @@
+<div>
+    <h1>Contact List</h1>
+    <div>
+        <button (click)="getList()">Get Contact List</button>
+        <table>
+            <tr *ngIf=contactList>
+                <th>Name</th>
+                <th>Photo</th>
+            </tr>
+            <tr *ngFor="let contact of contactList">
+                <td>{{contact.name}}</td>
+                <td><img src="{{contact.path}}"></td>
+            </tr>
+        </table>
+    </div>
+</div>

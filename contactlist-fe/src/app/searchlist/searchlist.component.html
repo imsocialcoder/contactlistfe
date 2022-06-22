@@ -1,0 +1,17 @@
+<div>
+    <h1>Search List By Name</h1>
+    <div>
+        <label>Name:</label><input #searchTxt>
+        <button (click)="getList(searchTxt.value)">Get Contact List</button>
+        <table>
+            <tr *ngIf=contactList>
+                <th>Name</th>
+                <th>Photo</th>
+            </tr>
+            <tr *ngFor="let contact of contactList">
+                <td>{{contact.name}}</td>
+                <td><img src="{{contact.path}}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
