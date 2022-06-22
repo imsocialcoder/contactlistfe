@@ -7,7 +7,7 @@
         <div>
             <label>Size:</label><input #size>
         </div>
-        <button (click)="getList(page.value, size.value)">Get List</button>
+        <button (click)="getListByPaging(page.value, size.value)">Get List</button>
         <table>
             <tr *ngIf=contactList>
                 <th>Name</th>

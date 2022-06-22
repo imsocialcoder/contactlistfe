@@ -2,7 +2,7 @@
     <h1>Search List By Name</h1>
     <div>
         <label>Name:</label><input #searchTxt>
-        <button (click)="getList(searchTxt.value)">Get Contact List</button>
+        <button (click)="getListBySearch(searchTxt.value)">Search</button>
         <table>
             <tr *ngIf=contactList>
                 <th>Name</th>
