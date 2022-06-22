@@ -11,12 +11,12 @@ import { Contact } from '../model/Contact'
 export class ContactListComponent implements OnInit{
     contactList: any;
     constructor(private http: HttpClient) { }
-    
+
     ngOnInit(): void {
         this.getList();
     }
 
-    getList() {
+    getList():void{
         this.http.get<Contact[]>("http://localhost:8080/api/contactlist")
             .pipe(catchError(this.handleError<Contact[]>('getList', [])))
             .subscribe(data => { this.contactList = data })
@@ -24,6 +24,7 @@ export class ContactListComponent implements OnInit{
 
     private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
+            console.log(error);
             return of(result as T);
         }
     }

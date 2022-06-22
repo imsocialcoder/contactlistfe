@@ -11,7 +11,7 @@ export class PagingListComponent {
     contactList: any;
     constructor(private http: HttpClient) { }
 
-    getListByPaging(page: string, size: string) {
+    getListByPaging(page: string, size: string): void {
         this.http.get<Contact[]>("http://localhost:8080/api/contactlist/paging?page=" + page + "&size=" + size)
             .pipe(catchError(this.handleError<Contact[]>('getList', [])))
             .subscribe(data => { this.contactList = data })
@@ -19,6 +19,7 @@ export class PagingListComponent {
 
     private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
+            console.log(error);
             return of(result as T);
         }
     }
