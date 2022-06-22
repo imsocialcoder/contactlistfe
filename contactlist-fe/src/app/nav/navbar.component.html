@@ -1,9 +1,9 @@
 <div class="navbar navbar-default">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <div><a href="/"><label>All Contacts</label></a></div>
-            <div><a href="/search"><label>Search By Name</label></a></div>
-            <div><a href="/paging"><label>Paging</label></a></div>
+            <a [routerLink]="['']">Get All Contacts</a>
+            <a [routerLink]="['/search']">Search By Name</a>
+            <a [routerLink]="['/paging']">Paging</a>
         </div>
     </div>
 </div>

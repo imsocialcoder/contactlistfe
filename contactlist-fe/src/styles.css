@@ -4,3 +4,7 @@ img{
     height: 100px;
 }
 
+a {
+    display: inline-block;
+    width: 300px;
+}
