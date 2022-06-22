@@ -1,6 +1,6 @@
 import { AnimateTimings } from "@angular/animations";
 import { HttpClient } from "@angular/common/http";
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { catchError, Observable, of } from "rxjs";
 import { Contact } from '../model/Contact'
 
@@ -8,9 +8,13 @@ import { Contact } from '../model/Contact'
     selector: 'contact-list',
     templateUrl: './contactlist.component.html'
 })
-export class ContactListComponent {
+export class ContactListComponent implements OnInit{
     contactList: any;
     constructor(private http: HttpClient) { }
+    
+    ngOnInit(): void {
+        this.getList();
+    }
 
     getList() {
         this.http.get<Contact[]>("http://localhost:8080/api/contactlist")
